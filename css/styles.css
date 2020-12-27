@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/pattern-curve.svg"), url("../images/pattern-bg.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, 85% 45%;
+  font-family: "Inter";
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  min-height: 100vh;
+}
+
+h2 {
+  color: hsl(240, 38%, 20%);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+h3 {
+  color: hsl(240, 18%, 77%);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  color: hsl(240, 38%, 20%);
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 300;
+  max-width: 640px;
+  margin: 4rem 0 3rem;
+}
+
+.l-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: inherit;
+}
+
+.l-container__item1{
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.item1--active{
+  opacity: 100%;
+  animation-name: fadein;
+  animation-duration: 2s;
+}
+
+.item1--slideleft{
+  opacity: 0;
+  animation-name: slideleft;
+  animation-duration: 1s;
+}
+
+.item1--slideright{
+  opacity: 0;
+  animation-name: slideright;
+  animation-duration: 1s;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
+@keyframes slideleft{
+  from { opacity: 100%; transform: translateX(0);}
+  to { opacity: 0%; transform: translateX(-1000px);}
+}
+
+@keyframes slideright{
+  from { opacity: 100%; transform: translateX(0);}
+  to { opacity: 0%; transform: translateX(1000px);}
+}
+
+.item1__text-wrapper {
+  background: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: 26% 0;
+  position: relative;
+  z-index: 1;
+  left: 40px;
+}
+
+.item1__profile {
+  display: flex;
+  align-items: center;
+}
+
+.item1__image-wrapper {
+  position: relative;
+}
+
+.item1__image {
+  border-radius: 5px;
+  position: relative;
+  right: 35px;
+  box-shadow: 0 30px 30px 0 rgba(32, 32, 70, 0.3);
+}
+
+.item1__button-wrapper {
+  position: absolute;
+  bottom: -1.75rem;
+  left: 1.7rem;
+  border-radius: 3.5rem;
+  z-index: 2;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  height: 3.5rem;
+  background: #fff;
+  width: 3.5rem;
+}
+
+.btn--left {
+  border-radius: 3.5rem 0 0 3.5rem;
+}
+
+.btn--right {
+  border-radius: 0 3.5rem 3.5rem 0;
+  margin-left: -5px;
+}
