@@ -44,6 +44,7 @@ p {
   justify-content: center;
   position: relative;
   min-height: inherit;
+  overflow-x: hidden;
 }
 
 .l-container__item1{
