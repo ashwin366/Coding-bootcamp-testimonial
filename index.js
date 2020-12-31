@@ -10,10 +10,10 @@ buttonLeft.forEach(function(btnleft) {
   btnleft.addEventListener("click", leftSlider);
 });
 
-document.addEventListener("keydown",function(e){
-  if (e.key === "ArrowRight"){
+document.addEventListener("keydown", function(e) {
+  if (e.key === "ArrowRight") {
     rightSlider();
-  }else if (e.key === "ArrowLeft") {
+  } else if (e.key === "ArrowLeft") {
     leftSlider();
   }
 });
